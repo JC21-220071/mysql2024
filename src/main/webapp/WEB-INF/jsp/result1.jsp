@@ -18,8 +18,8 @@
 	<table>
 		<% for(String[] ss : result) { %>
 		<tr>
-			<td><%= ss[0]%></td>
-			<td><%=ss[1]%></td>
+			<th><%=ss[1]%></th>
+			<td><%=ss[0]%></td>
 			<td><%=ss[2]%></td>
 		</tr>
 		<% } %>

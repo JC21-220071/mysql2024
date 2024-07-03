@@ -11,6 +11,7 @@
 <%ArrayList<String[]> result = (ArrayList<String[]>) request.getAttribute("result");%>
 
 <body>
+<FORM METHOD="GET" ACTION="./result1">
 <SELECT NAME="ITEM_NO">
 	
 <% for (String[] ss : result) { %>
@@ -21,6 +22,8 @@
 
 
 </SELECT>
+<INPUT TYPE="SUBMIT" VALUE="絞り込む"/>
+</FORM>
 </body>
 </html>
 
