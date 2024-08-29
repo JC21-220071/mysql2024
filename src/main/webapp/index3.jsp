@@ -14,11 +14,8 @@
 <SELECT NAME="ITEM_NO">
 	
 <% for (String[] ss : result) { %>
-		<OPTION VALUE="<%=ss[1] %>">
-		<%= ss[0] %>
-		</OPTION>
+		<OPTION VALUE="<%=ss[1] %>"><%= ss[0] %></OPTION>
 <% } %>
-
 
 </SELECT>
 </body>

@@ -11,8 +11,9 @@
 <%ArrayList<String[]> result = (ArrayList<String[]>) request.getAttribute("result");%>
 
 <body>
-<FORM METHOD="GET" ACTION="./result1">
-<SELECT NAME="ITEM_NO">
+<FORM METHOD="GET" ACTION="result1">
+
+<SELECT NAME="ID">
 	
 <% for (String[] ss : result) { %>
 		<OPTION VALUE="<%=ss[1] %>">

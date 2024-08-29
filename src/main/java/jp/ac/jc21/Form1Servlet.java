@@ -15,9 +15,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class IndexServlet
- */
 @WebServlet("/form1")
 public class Form1Servlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -35,7 +32,6 @@ public class Form1Servlet extends HttpServlet {
 		response.setContentType("text/html;charset=UTF-8");
 		response.getWriter().append("<h2>Connect to : ").append(url).append("</h2>");
 
-		
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection conn = DriverManager.getConnection(url, user, pass);
@@ -45,21 +41,20 @@ public class Form1Servlet extends HttpServlet {
 			PreparedStatement statement = conn.prepareStatement(sql);
 
 			ResultSet rs = statement.executeQuery();
-			
+
 			ArrayList<String[]> result = new ArrayList<>();
 			while (rs.next() == true) {
 				String[] s = new String[3];
-				s[0]=rs.getString("item_name");
-				s[1]=rs.getString("item_id");
-				s[2]=rs.getString("price");
+				s[0] = rs.getString("item_name");
+				s[1] = rs.getString("item_id");
+				s[2] = rs.getString("price");
 				result.add(s);
 			}
-			
+
 			request.setAttribute("result", result);
-			RequestDispatcher rd = 
-					request.getRequestDispatcher("/WEB-INF/jsp/form1.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/form1.jsp");
 			rd.forward(request, response);
-			
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {

@@ -10,26 +10,20 @@
 </head>
 
 <%
-ArrayList<String[]> result = (ArrayList<String[]>) request.getAttribute("result");
+	ArrayList<String[]> MAKER = 
+		(ArrayList<String[]>) request.getAttribute("MAKER");
 %>
 
 <body>
-
 	<table>
-		<%
-		for (String[] ss : result) {
-		%>
+		<% for(String[] ss : MAKER) { %>
 		<tr>
-			
-			<th><%=ss[1]%></th>
 			<td><%=ss[0]%></td>
-			<td><%=ss[2]%></td>
+			<td><%=ss[1]%></td>
 		</tr>
-		<%
-		}
-		%>
+		<% } %>
+
 	</table>
+
 </body>
 </html>
-
-

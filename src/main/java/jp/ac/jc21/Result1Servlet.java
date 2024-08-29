@@ -1,3 +1,4 @@
+
 package jp.ac.jc21;
 
 import java.io.IOException;
@@ -40,10 +41,13 @@ public class Result1Servlet extends HttpServlet {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection conn = DriverManager.getConnection(url, user, pass);
 
-			String sql = "SELECT item_id,item_name,price FROM Items";
+			String sql = "SELECT item_id,item_name,price FROM Items";//where item_id= ? 
 
 			PreparedStatement statement = conn.prepareStatement(sql);
 
+			//String id = request.getParameter("ID");
+			//statement.setString(1, id);
+			
 			ResultSet rs = statement.executeQuery();
 			
 			ArrayList<String[]> result = new ArrayList<>();
