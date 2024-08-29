@@ -81,16 +81,6 @@ public class ProductServlet extends HttpServlet {
 				PRODUCT.add(s2);
 			}
 			
-			
-			//ResultSet rs3 = statement3.executeQuery();
-			
-			/*while (rs3.next() == true) {
-			    String[] s3 = new String[3];
-			    s3[0] = rs3.getString("PRODUCT_CODE");
-			    s3[1] = rs3.getString("PRODUCT_NAME");
-			    s3[2] = rs3.getString("MAKER_NAME"); // ここをMAKER_NAMEに変更
-			    PRODUCT.add(s3);
-			}*/
 
 			
 			request.setAttribute("MAKER", MAKER);
