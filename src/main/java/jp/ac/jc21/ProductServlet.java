@@ -63,9 +63,9 @@ public class ProductServlet extends HttpServlet {
 			String id = request.getParameter("ID");
 			
 			if(id != null) {
+				//URLパラメータが存在する場合の処理
 				sql2 = sql2 + " where PRODUCT.MAKER_CODE= ?";
 				statement2 = conn.prepareStatement(sql2);
-				
 				statement2.setString(1, id);
 			}
 			
