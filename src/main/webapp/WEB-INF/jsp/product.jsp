@@ -41,7 +41,7 @@
 
 <% for (String[] ss2 : PRODUCT) { %>
 		<tr>
-			<td><%=ss2[0]%></td>
+			<th><%=ss2[0]%></th>
 			<td><%=ss2[1]%></td>
 			<td><%=ss2[2]%></td>
 		</tr>
